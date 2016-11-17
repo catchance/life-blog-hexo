@@ -1,0 +1,21 @@
+mixin a_with_current(href, content)
+  - var url = url_for(href)
+  if (href == config.root && (is_home() || is_post())) || is_current(href)
+    if (url.indexOf("http://")==0 || url.indexOf("https://")==0)
+      a.sidebar-nav-item.active(href=url, target="_blank")
+        = content
+    else
+      a.sidebar-nav-item.active(href=url)
+        = content
+  else
+    if (url.indexOf("http://")==0 || url.indexOf("https://")==0)
+      a.sidebar-nav-item(href=url, target="_blank")
+        = content
+    else
+      a.sidebar-nav-item(href=url)
+        = content
+
+mixin social_icon(type, website, icon)
+  if ((config.social && config.social[type]) || (theme.social && theme.social[type]))
+    a(href=website + ((config.social && config.social[type]) || (theme.social && theme.social[type])), target="_blank")
+      i.fa(class=icon)
