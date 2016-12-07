@@ -106,7 +106,7 @@ header {
 nav {
     top: 0;
     position: sticky;
-    background: #333;
+    background: #f5f5f5;
     font-family: $font-mono;
     font-size: 1em;
     z-index: 10;
@@ -122,7 +122,7 @@ nav {
     a {
         &, &:visited {
             text-decoration: none;
-            color: #F1F1F1;
+            color: #555;
         }
 
         padding: .625em 1.25em;
@@ -138,7 +138,7 @@ nav {
             top: 19px;
             height: 6px;
             width: 6px;
-            background: white;
+            background: #555;
             opacity: 0.5;
         }
 
@@ -151,7 +151,7 @@ nav {
             bottom: 0;
             height: 3px;
             width: 0;
-            background: $color-underscore;
+            background: #555;
             transition: width .25s;
         }
 
@@ -366,7 +366,7 @@ $post-time-space: 1em;
             color: #666;
 
             &::after {
-                background: #A1EFE9;
+                background: #CCFFFF;
             }
         }
     }
@@ -502,14 +502,14 @@ $post-time-space: 1em;
 footer#footer {
     text-align: right;
     margin-top: 2em;
-    background: #333;
+    background: #f5f5f5;
 
     &, & a, & a:visited {
         color: #AAA;
     }
 
     & a:hover {
-        color: #EEE;
+        color: #555;
     }
 
     .bar {
@@ -675,7 +675,7 @@ article {
 
     // link
     a {
-        color: $color-main-link;
+        color: #555;
         text-decoration: none;
         opacity: 0.9;
 
@@ -684,8 +684,8 @@ article {
         border-bottom: .08em solid lightgray;
         &:hover {
             opacity: 1;
-            border-bottom: .08em solid $color-main-link-hover;
-            color: $color-main-link-hover;
+            border-bottom: .08em solid #555;
+            color: #555;
         }
     }
 
