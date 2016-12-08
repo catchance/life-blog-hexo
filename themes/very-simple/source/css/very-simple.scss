@@ -7,10 +7,27 @@ html, body {
     margin: 0;
     font-size: $font-size-main;
     position: relative;
-
     a {
         outline: none;
     }
+}
+
+html {
+  overflow-y: scroll;
+}
+
+:root {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+:root body {
+  position: absolute;
+}
+
+body {
+  width: 100vw;
+  overflow: hidden;
 }
 
 /**
@@ -238,7 +255,7 @@ nav {
         content: '';
         position: absolute;
         height: 100%;
-        width: 6px;
+        width: 2px;
         background: #666; // #333 with opacity 0.75
 
         @media only screen and (max-width: $break-level-4) {
@@ -279,8 +296,8 @@ nav {
     }
 }
 
-$outer-circle-radius: 10px;
-$inner-circle-radius: 8px;
+$outer-circle-radius: 5px;
+$inner-circle-radius: 4px;
 $post-time-space: 1em;
 .post-entry {
     font-size: 16px;
@@ -328,8 +345,8 @@ $post-time-space: 1em;
         &::before {
             content: '';
             position: absolute;
-            width: 20px;
-            height: 20px;
+            width: 10px;
+            height: 10px;
             background: #666; // #333 with opacity 0.75
             border-radius: 100%;
             left: calc(100% + 1rem + #{$vertical-bar-width}/2 - #{$outer-circle-radius});
@@ -345,8 +362,8 @@ $post-time-space: 1em;
         &::after {
             content: '';
             position: absolute;
-            width: 16px;
-            height: 16px;
+            width: 8px;
+            height: 8px;
             background: #FCF9E8;
             border-radius: 100%;
             transition: background-color .2s ease-in-out;
@@ -698,7 +715,7 @@ article {
     blockquote {
         margin: 1em 0;
         padding: 0 $article-padding;
-        border-left: 5px solid $color-underscore;
+        border-left: 4px solid #ddd;
 
         // block footer
         footer {
